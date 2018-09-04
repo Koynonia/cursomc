@@ -27,7 +27,7 @@ public class ImageService {
 		try {
 			BufferedImage img = ImageIO.read(uploadedFile.getInputStream());
 			if ("png".equals(ext)) {
-				img = (img);
+				img = pngToJpg(img);
 			}
 			return img;
 		} catch (IOException e) {
